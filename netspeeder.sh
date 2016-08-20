@@ -1,9 +1,4 @@
 ﻿#!/bin/sh
-
-# Set Linux PATH Environment Variables
-PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
-export PATH
-
 # Check If You Are Root
 if [ $(id -u) != "0" ]; then
     clear
@@ -13,11 +8,10 @@ fi
 
 wget http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-8.noarch.rpm
 rpm -ivh epel-release-7-8.noarch.rpm
-yum install libnet libpcap libnet-devel libpcap-devel
-
+yum install -y libnet libnet-devel libpcap libpcap-devel gcc
 wget https://github.com/snooda/net-speeder/archive/master.zip
 unzip master.zip
-cd master
+cd net-speeder-master
 if [ -f /proc/user_beancounters ] || [ -d /proc/bc ]; then
     sh build.sh -DCOOKED
     INTERFACE=venet0
