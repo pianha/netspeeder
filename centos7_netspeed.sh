@@ -19,13 +19,7 @@ else
     echo "\033[31m Error: Unable to Determine OS Bit. \033[0m"
     exit 1
 fi
-if egrep -q "5.*" /etc/issue; then
-    OST=5
-    wget http://dl.fedoraproject.org/pub/epel/5/${OSB}/epel-release-5-4.noarch.rpm
-elif egrep -q "6.*" /etc/issue; then
-    OST=6
-    wget http://dl.fedoraproject.org/pub/epel/6/${OSB}/epel-release-6-8.noarch.rpm
-elif egrep -q "7.*" /etc/issue; then
+if egrep -q "7.*" /etc/issue; then
     OST=7
     wget http://dl.fedoraproject.org/pub/epel/7/${OSB}/e/epel-release-7-8.noarch.rpm
 else
