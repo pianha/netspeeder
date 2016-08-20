@@ -11,24 +11,9 @@ if [ $(id -u) != "0" ]; then
     exit 1
 fi
 
-if [ $(arch) == x86_64 ]; then
-    OSB=x86_64
-elif [ $(arch) == i686 ]; then
-    OSB=i386
-else
-    echo "\033[31m Error: Unable to Determine OS Bit. \033[0m"
-    exit 1
-fi
-if egrep -q "7.*" /etc/issue; then
-    OST=7
-    wget http://dl.fedoraproject.org/pub/epel/7/${OSB}/e/epel-release-7-8.noarch.rpm
-else
-    echo "\033[31m Error: Unable to Determine OS Version. \033[0m"
-    exit 1
-fi
-
-rpm -Uvh epel-release*rpm
-yum install -y libnet libnet-devel libpcap libpcap-devel gcc
+wget http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-8.noarch.rpm
+rpm -ivh epel-release-7-8.noarch.rpm
+yum install libnet libpcap libnet-devel libpcap-devel
 
 wget https://github.com/snooda/net-speeder/archive/master.zip
 unzip master.zip
