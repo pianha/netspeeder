@@ -1,9 +1,5 @@
 # netspeeder mod
 
-####netspeeder2Centos6or7.sh is for Centos6 & 7 (32bit|64bit)  
-#####follow step below  
-1 `wget https://raw.githubusercontent.com/pianha/netspeeder/master/netspeeder2Centos6or7.sh`  
-2 `sh netspeeder2Centos6or7.sh`  
-#####done
+##netspeeder2Centos5or6.sh is for Centos5 & 6 (32bit|64bit)  
 
-##for centos7 x64 
+##netspeeder4Centos7x64.sh for centos7 x64 
