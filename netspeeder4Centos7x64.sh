@@ -1,4 +1,4 @@
-﻿#!/bin/sh
+#!/bin/sh
 # Check If You Are Root
 if [ $(id -u) != "0" ]; then
     clear
@@ -27,4 +27,3 @@ cp -Rf net_speeder $NS_PATH
 
 echo -e "\033[36m net_speeder installed. \033[0m"
 echo -e "\033[36m Usage: nohup ${NS_PATH}/net_speeder $INTERFACE \"ip\" >/dev/null 2>&1 & \033[0m"
-#
