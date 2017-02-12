@@ -3,6 +3,6 @@
 
 *netspeeder4Centos5or6.sh* is for **Centos5 & 6 (32bit|64bit)**  
 
-*netspeeder4Centos7x64.sh* is for **Centos7 x64** 
+*netspeeder7.sh* is for **Centos7 x64** 
 
 More info look [THIS](https://github.com/snooda/net-speeder)
